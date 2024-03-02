@@ -21,3 +21,18 @@ const { title } = Astro.props;
 		<script src="../../node_modules/preline/dist/preline.js"></script>
 	</body>
 </html>
+
+<style>
+	:global(html) {
+	  
+	  /* ...TRUNCATED */
+  
+	  color: hsl(var(--colour-text-hue) var(--colour-text-saturation) var(--colour-text-luminance));
+  
+		  scroll-behavior: smooth;
+	}
+	@media (prefers-reduced-motion: reduce) {
+	  :global(html) {
+		scroll-behavior: auto;
+	  }
+	}
