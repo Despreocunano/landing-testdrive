@@ -1,11 +1,11 @@
 ---
-const { titulo, descripcion, icon, alto } = Astro.props;
+const { titulo, descripcion, icon, size, atl } = Astro.props;
 ---      
       <!-- Card -->
       <div class="size-full bg-white shadow-lg rounded-lg p-5">
         <div class="flex items-center gap-x-4 mb-3">
           <div class="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-blue-50 bg-blue-100">
-            <img src={icon} class={alto} />
+            <img src={icon} class={size} alt={alt} />
          </div>
           <div class="flex-shrink-0">
             <h3 class="block text-lg font-semibold text-gray-800">{titulo}</h3>
