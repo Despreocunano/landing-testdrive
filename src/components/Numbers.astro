@@ -1,3 +1,6 @@
+---
+
+---
 <!-- Features -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <!-- Grid -->
@@ -5,11 +8,12 @@
       <div class="lg:col-span-4">
         <!-- Stats -->
         <div class="lg:pe-6 xl:pe-12">
-          <p class="text-6xl font-bold leading-10 text-primary-100">
-            92%
-
-          </p>
+          <p >
+            <span class="text-6xl font-bold leading-10 text-primary-100 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:92]'">
+              <span class="text-3xl font-semibold text-primary-100 supports-[counter-set]:sr-only">92</span>%
+          </span>
           <p class="mt-2 sm:mt-3 text-gray-500">De nuestros estudiantes aprueba el examen en su primer intento.</p>
+          </p>
         </div>
         <!-- End Stats -->
       </div>
@@ -19,21 +23,35 @@
         <div class="grid gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-3 sm:gap-8">
           <!-- Stats -->
           <div>
-            <p class="text-3xl font-semibold text-primary-100">+1500</p>
+            <p>
+              <span class="text-3xl font-bold leading-10 text-primary-100 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1500]'">
+                <span class="text-3xl font-semibold text-primary-100 supports-[counter-set]:sr-only">1500</span>+
+            </span>
+            </p>
             <p class="mt-1 text-gray-500">Preguntas actualizadas.</p>
           </div>
           <!-- End Stats -->
   
           <!-- Stats -->
           <div>
-            <p class="text-3xl font-semibold text-primary-100">+55.000</p>
+            <p>
+              <span class="text-3xl font-bold leading-10 text-primary-100 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:55000]'">
+                <span class="text-3xl font-semibold text-primary-100 supports-[counter-set]:sr-only">55.000</span>+
+            </span>
+            </p>
+            </p>
             <p class="mt-1 text-gray-500">Examenes realizados el último mes.</p>
           </div>
           <!-- End Stats -->
   
           <!-- Stats -->
           <div>
-            <p class="text-3xl font-semibold text-primary-100">+500</p>
+            <p>
+              <span class="text-3xl font-bold leading-10 text-primary-100 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:500]'">
+                <span class="text-3xl font-semibold text-primary-100 supports-[counter-set]:sr-only">1500</span>+
+            </span>
+            </p>
+            </p>
             <p class="mt-1 text-gray-500">Alumnos nuevos cada día.</p>
           </div>
           <!-- End Stats -->
@@ -44,4 +62,20 @@
     <!-- End Grid -->
   </div>
   <!-- End Features -->
+
+  <style>
+    @property --num {
+        syntax: '<integer>';
+        initial-value: 0;
+        inherits: false;
+    }
+    @keyframes counter {
+        from {
+            --num: 0;
+        }
+        to {
+            --num: 92;
+        }
+    }    
+</style>
 
