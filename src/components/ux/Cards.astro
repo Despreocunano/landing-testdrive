@@ -1,16 +1,19 @@
 ---
-const { titulo, descripcion, icon, size, alt } = Astro.props;
+import { Features } from '../../consts/Features.ts'
 ---      
       <!-- Card -->
+      {
+      Features.map(({ icon, alt, tittle, description }) => (
       <div class="size-full bg-white shadow-lg rounded-lg p-5">
         <div class="flex items-center gap-x-4 mb-3">
           <div class="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-blue-50 bg-blue-100">
-            <img src={icon} class={size} alt={alt} />
+            <img src={icon} alt={alt} class="w-8 h-8"/>
          </div>
           <div class="flex-shrink-0">
-            <h3 class="block text-lg font-semibold text-gray-800">{titulo}</h3>
+            <h3 class="block text-lg font-semibold text-gray-800">{tittle}</h3>
           </div>
         </div>
-        <p class="text-lg text-gray-500">{descripcion}</p>
-      </div>
+        <p class="text-lg text-gray-500">{description}</p>
+      </div>))
+    }
       <!-- End Card -->
