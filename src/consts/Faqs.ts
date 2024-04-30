@@ -1,15 +1,15 @@
 export const FAQS = [
     {
         question: "¿Cuál es el valor de la app?",
-        answer: "El costo de la aplicación es de $3.990 (Precio lanzamiento, normal $4.990) tanto para dispositivos Android e iOS, de igual forma siempre nos encontramos realizando descuentos para la versión premium. Por lo que te invitamos a simular la compra y descubrir si hay algún descuento disponible 🙂",
+        answer: "El costo de la aplicación es de $7.990 por mes o bien $3.990 por 7 días tanto para dispositivos Android e iOS, de igual forma siempre nos encontramos realizando descuentos para la versión premium. Por lo que te invitamos a simular la compra y descubrir si hay algún descuento disponible 🙂",
     },
     {
         question: "Cuanto tiempo dura la suscripción",
-        answer: "Al momento de realizar la compra se activa tu cuenta premium por 31 días, es importante que sepas que es un pago recurrente por lo que si no quieres que se renueve deves darte de baja de la suscripción en tu tienda de aplicaciones.",
+        answer: "Al momento de realizar la compra se activa tu cuenta premium por 31 o 7 días de acuerdo a la suscripcióm que hayas elegido, es importante que sepas que es un pago recurrente por lo que si no quieres que se renueve deves darte de baja de la suscripción en tu tienda de aplicaciones.",
     },
     {
         question: "¿Que pasa si cancelo la suscripción en la tienda de aplicaciones?",
-        answer: "Si cancelaste la suscripción no te preocupes, de igual forma seguiras manteniendo el acceso premium por un total de 31 días.",
+        answer: "Si cancelaste la suscripción no te preocupes, de igual forma seguiras manteniendo el acceso premium por un total de 31 o 7 días según corresponda",
     },
     {
         question: "¿El contenido se encuentra actualizado?",
@@ -17,7 +17,7 @@ export const FAQS = [
     },
     {
         question: "¿Cuantas preguntas tienen para practicar el ensayo de la prueba de conducir?",
-        answer: "Contamos con más de 1500 preguntas actualizadas y además puedes realizar ensayos categorizados dependiento de lo que necesites practicar, ya sea, señales del tránsito, preguntas de selección multiple, verdadero o falso, etc. Animate y descarga nuestra aplicación.",
+        answer: "Contamos con más de 1500 preguntas actualizadas y subiendo, además puedes realizar ensayos categorizados dependiento de lo que necesites practicar, ya sea, señales del tránsito, preguntas de selección multiple, verdadero o falso, etc. Animate y descarga nuestra aplicación.",
     },
     {
         question: "¿Cómo eliminar mi cuenta en la APP?",
