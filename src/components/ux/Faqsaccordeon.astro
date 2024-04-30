@@ -2,15 +2,15 @@
 import { FAQS } from '../../consts/Faqs'
 ---
 {
-  FAQS.map(({ question, answer }) => (
+  FAQS.map(({ question, answer, isActive }) => (
     <div class="hs-accordion-group">
-      <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
-        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 " aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+      <div class={`hs-accordion ${isActive ? 'hs-accordion-active:bg-gray-100' : ''} rounded-xl p-6 ${isActive ? 'active' : ''}`} id="hs-basic-with-title-and-arrow-stretched-heading-one">
+        <button class={`hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 ${isActive ? 'bg-gray-100' : ''}`} aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
           {question}
-          <svg class="hs-accordion-active:hidden block flex-shrink-0 size-5 text-gray-500 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          <svg class="hs-accordion-active:block hidden flex-shrink-0 size-5 text-gray-500 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          <svg class={`hs-accordion-active:hidden block flex-shrink-0 size-5 text-gray-500 group-hover:text-gray-500 ${isActive ? 'text-gray-500' : ''}`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class={`hs-accordion-active:block hidden flex-shrink-0 size-5 text-gray-500 group-hover:text-gray-500 ${isActive ? 'text-gray-500' : ''}`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
         </button>
-        <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${isActive ? 'block' : 'hidden'}`} aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
           <p class="text-gray-800">
             {answer}
           </p>
@@ -19,3 +19,4 @@ import { FAQS } from '../../consts/Faqs'
     </div>
   ))
 }
+
