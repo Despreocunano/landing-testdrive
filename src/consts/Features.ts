@@ -3,7 +3,7 @@ export const FEATURES = [
 		icon: "./assets/icons/test.svg",
         alt: "Icono de un examen",
 		tittle: "Ensayos del examen",
-		description: "Realiza ensayos gratis todos los días o bien accede a ensayos ilimitados durante un mes por sólo $3.990.",
+		description: "Realiza ensayos gratis todos los días o bien accede a ensayos ilimitados durante un mes por sólo $7.990.",
 	},
     {
 		icon: "./assets/icons/ia.svg",
