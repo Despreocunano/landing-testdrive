@@ -8,9 +8,8 @@ export const sendEmail = async (formData: FormData) => {
     const { name, email, subject, message } = formData;
     
     await resend.emails.send({
-      from: 'Formulario de Contacto <onboarding@resend.dev>',
-      to: 'hola@dreamco.cl',
-      reply_to: email,
+      from: 'Formulario de Contacto',
+      to: 's.orostica.garcia@gmail.com',
       subject: `Nuevo mensaje de contacto: ${subject}`,
       html: `
         <h2>Nuevo mensaje de contacto</h2>
