@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ContactForm } from '../components/ContactForm';
+---
+
+<Layout title="Contacto">
+  <main class="mx-auto px-4 py-8 w-full max-w-2xl">
+    <h1 class="text-4xl font-bold text-center mb-8">
+      Contacto <span class="text-gradient">con nosotros</span>
+    </h1>
+    
+    <div class="bg-gradient-to-b from-accent-dark/66 to-accent-dark/33 p-8 rounded-lg
+                border border-accent-light/25">
+      <ContactForm client:load />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
