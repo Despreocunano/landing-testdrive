@@ -21,7 +21,7 @@ export const FormInput: React.FC<InputProps> = ({
       onChange={onChange}
       required={required}
       className="w-full px-4 py-2 bg-white/10 border border-accent-light/25 rounded-md
-                text-white focus:border-accent-light focus:ring-1 focus:ring-accent-light
+                text-black focus:border-accent-light focus:ring-1 focus:ring-accent-light
                 focus:outline-none transition-colors"
     />
   </div>

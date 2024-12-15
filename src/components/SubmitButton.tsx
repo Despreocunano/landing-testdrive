@@ -8,9 +8,9 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({ isSubmitting }) => (
   <button
     type="submit"
     disabled={isSubmitting}
-    className="w-full px-6 py-3 bg-accent text-white font-medium rounded-md
+    className="w-full px-6 py-3 bg-accent text-black font-medium rounded-md
               hover:bg-accent-dark disabled:opacity-50 disabled:cursor-not-allowed
-              transition-colors duration-200 ease-in-out"
+              transition-colors duration-200 ease-in-out border border-black"
   >
     {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
   </button>
