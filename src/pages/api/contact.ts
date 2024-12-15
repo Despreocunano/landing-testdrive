@@ -19,25 +19,45 @@ export const POST: APIRoute = async ({ request }) => {
     if (!result.success) {
       return new Response(
         JSON.stringify({ error: result.error }), 
-        { status: 500 }
+        { 
+          status: 500,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
       );
     }
 
     return new Response(
       JSON.stringify({ message: 'Email enviado exitosamente' }), 
-      { status: 200 }
+      { 
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
     );
   } catch (error) {
     if (error instanceof z.ZodError) {
       return new Response(
         JSON.stringify({ error: error.errors[0].message }), 
-        { status: 400 }
+        { 
+          status: 400,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
       );
     }
 
     return new Response(
       JSON.stringify({ error: 'Error interno del servidor' }), 
-      { status: 500 }
+      { 
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
     );
   }
 };
